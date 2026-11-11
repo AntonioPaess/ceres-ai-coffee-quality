@@ -50,26 +50,19 @@ otherwise legitimate updates will be rejected (`401`) until both sides match.
 | Misc | Page-size bound on `/albert/chats`; honest `/market-price/refresh` (no fake “updated”). |
 | Dependencies | Patch-level upgrades for `react-router`, `zod`, `postcss`, `vite`, `vitest`; `pnpm` overrides for `tinypool` and `postcss-selector-parser`. `pnpm audit` reports no known vulnerabilities at the time of the audit. |
 
-## Remote actions still required (not performed — need owner authorization)
+## Deployment checklist
 
-1. **Rotate the exposed demo account.** The demo e-mail and password were committed in
-   `src/pages/Index.tsx`, `pocketbase/migrations/0005_seed_data.js` and `0006_seed_test_user.js`
-   and remain in **Git history** and in the **currently deployed prototype** (the login page still
-   displays them until this branch is deployed). Reset the password (or disable the account) in the
-   hosted PocketBase and check it for unexpected data/sessions.
-2. **Check reuse.** If that password was ever used elsewhere, change it there too.
-3. **Configure `TELEGRAM_WEBHOOK_SECRET`** and re-register the webhook (above) as part of the deploy.
-4. **Rotate `PB_SUPERUSER_TOKEN`** if there is any doubt about where it was copied; prefer a token
-   with the shortest practical lifetime.
-5. **Apply migrations `0042`–`0044`** to the hosted database (they are additive; see
-   [LOCAL_DEVELOPMENT](LOCAL_DEVELOPMENT.md) for testing them first on a copy).
-6. Before making the repository public, follow the publication checklist in
-   [AUDIT_REPORT](AUDIT_REPORT.md#publication-readiness).
+1. Never enable the demo seed (`CERES_SEED_DEMO_*`) on a production database; rotate any credential
+   that was ever committed or shared.
+2. Configure `TELEGRAM_WEBHOOK_SECRET` and re-register the webhook (above) **before** deploying the
+   webhook hook.
+3. Keep `PB_SUPERUSER_TOKEN` short-lived and rotate it regularly.
+4. Apply migrations in order on a staging copy first (`0042`–`0044` are additive; see
+   [LOCAL_DEVELOPMENT](LOCAL_DEVELOPMENT.md)), run the live authorization tests, then production.
 
-Git history scan (patterns for Roboflow/Telegram/OpenAI/Google/GitHub keys, JWTs, private keys,
-`setPassword('…')`): **no API keys or tokens found**; the only credential in history is the demo
-account above. The personal e-mail used for the original seed also appears in migrations
-`0005`, `0006`, `0013` and `0017` (history and current files).
+This public repository starts from a clean snapshot of the audited code. A scan of the original
+history (Roboflow/Telegram/OpenAI/Google/GitHub key patterns, JWTs, private keys, hardcoded
+`setPassword`) found **no API keys or tokens**.
 
 ## Residual risks
 

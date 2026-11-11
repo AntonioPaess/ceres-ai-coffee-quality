@@ -43,6 +43,5 @@ Ceres AI is a **hackathon prototype**. Known limitations, stated plainly:
 
 ## Operations
 
-* Applying the audit migrations and the Telegram secret on the hosted environment is pending
-  (owner action). Until then, the live prototype still runs the pre-audit code.
+* Deploying the backend requires the Skip project and its secrets (see [SECURITY](SECURITY.md#deployment-checklist)).
 * `telegram_updates` has no retention job yet.

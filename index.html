@@ -16,7 +16,14 @@
   <body>
     <div id="root"></div>
     <!-- @skip-protected: Do not remove. Required for app features. -->
-    <script src="https://goskip.dev/skip.js"></script>
+    <!-- Skip platform badge: only meaningful (and CORS-allowed) when hosted on Skip -->
+    <script>
+      if (/\.goskip\.(app|dev)$/.test(location.hostname)) {
+        var s = document.createElement('script')
+        s.src = 'https://goskip.dev/skip.js'
+        document.head.appendChild(s)
+      }
+    </script>
     <!-- @skip-protected: Do not remove. App entrypoint. -->
     <script type="module" src="/src/main.tsx"></script>
   </body>

@@ -9,6 +9,7 @@
 </p>
 
 <p align="center">
+  <a href="https://ceres-ai-coffee-quality.vercel.app"><strong>Live demo</strong></a> ·
   <a href="README.pt-BR.md">Leia em português</a> ·
   <a href="docs/ARCHITECTURE.md">Architecture</a> ·
   <a href="docs/AI_INTEGRATIONS.md">AI integrations</a> ·
@@ -202,9 +203,9 @@ rules; market cache not refreshed by this code; backend tied to Skip. Full list:
 
 ## Prototype status
 
-* Built during a hackathon; deployed on Skip at `ceres-ai-cafe-87c6b.goskip.app`.
-* The deployed version predates the security audit and **is not presented as a safe public demo**
-  until this branch is deployed and the old demo credentials are rotated.
+* Built during a hackathon on Skip; the backend (PocketBase, hooks, agents) runs on Skip.
+* Frontend of this repository deployed on Vercel: **https://ceres-ai-coffee-quality.vercel.app**
+  (signing up creates an account on the prototype backend; please use test data only).
 * No claims of commercial users, validated accuracy, or official grading.
 
 ## Team

@@ -9,6 +9,7 @@
 </p>
 
 <p align="center">
+  <a href="https://ceres-ai-coffee-quality.vercel.app"><strong>Demo</strong></a> ·
   <a href="README.md">Read in English</a> ·
   <a href="docs/ARCHITECTURE.md">Arquitetura</a> ·
   <a href="docs/AI_INTEGRATIONS.md">Integrações de IA</a> ·
@@ -195,9 +196,9 @@ Lista completa: [docs/LIMITATIONS.md](docs/LIMITATIONS.md).
 
 ## Status do protótipo
 
-* Construído durante um hackathon; publicado no Skip em `ceres-ai-cafe-87c6b.goskip.app`.
-* A versão publicada é anterior à auditoria e **não é apresentada como demonstração pública segura**
-  até que esta branch seja publicada e as credenciais antigas sejam trocadas.
+* Construído durante um hackathon no Skip; o backend (PocketBase, hooks, agentes) roda no Skip.
+* Frontend deste repositório publicado na Vercel: **https://ceres-ai-coffee-quality.vercel.app**
+  (o cadastro cria uma conta no backend do protótipo; use apenas dados de teste).
 * Não há alegação de usuários comerciais, precisão validada ou classificação oficial.
 
 ## Equipe
