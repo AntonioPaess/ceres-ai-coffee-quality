@@ -215,8 +215,8 @@ Ceres AI was designed and built **collectively** by three people, with equal cre
 | | Name | Links |
 | --- | --- | --- |
 | 👤 | **Antônio José Paes de Andrade Júnior** | [GitHub @AntonioPaess](https://github.com/AntonioPaess) |
-| 👤 | **Evaldo Galdino da Cunha Filho** | _links to be added_ |
-| 👤 | **Rafael Rodrigues Ferreira Teles** | _links to be added_ |
+| 👤 | **Evaldo Galdino da Cunha Filho** | [GitHub @evaldocunhaf](https://github.com/evaldocunhaf) |
+| 👤 | **Rafael Rodrigues Ferreira Teles** | [GitHub @RTels](https://github.com/RTels) |
 
 The Git history is made of automated commits created by the Skip platform and the import into this
 repository; it does not reflect individual contributions, and no division of responsibilities is
